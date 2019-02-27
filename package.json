@@ -12,7 +12,8 @@
   "dependencies": {
     "vant": "^1.6.1",
     "vue": "^2.6.2",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "axios": "^0.16.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.4.0",
