@@ -65,6 +65,7 @@
                         </dl>
                     </van-col>
                 </van-row>
+                <div>{{string|slice10}}</div>
             </div>
 
         </van-pull-refresh>
@@ -101,7 +102,8 @@
                     normal: 'https://img.yzcdn.cn/public_files/2017/10/13/c547715be149dd3faa817e4a948b40c4.png',
                     active: 'https://img.yzcdn.cn/public_files/2017/10/13/793c77793db8641c4c325b7f25bf130d.png'
                 },
-                isLoading: false
+                isLoading: false,
+                string:'2017-12-30 00:00'
             }
         },
         methods: {
@@ -111,6 +113,13 @@
                     this.isLoading = false;
                     this.count++;
                 }, 1000);
+            }
+        },
+        filters: {
+            capitalize: function (value) {
+                if (!value) return ''
+                value = value.toString()
+                return value.charAt(0).toUpperCase() + value.slice(1)
             }
         }
 
